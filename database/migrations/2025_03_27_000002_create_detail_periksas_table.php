@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detailperiksas', function (Blueprint $table) {
+        Schema::create('detail_periksas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_periksa')->constrained('periksas')->onDelete('cascade');
             $table->foreignId('id_obat')->constrained('obats')->onDelete('cascade');
-
             $table->timestamps(); // jika ingin mencatat waktu
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
     public function down(): void
     {
         // PERBAIKI juga di sini: nama tabel harus sama dengan `create`
-        Schema::dropIfExists('detailperiksas');
+        Schema::dropIfExists('detail_periksas');
     }
 };

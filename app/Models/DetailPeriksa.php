@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class DetailPeriksa extends Model
 {
-    protected $table = 'detailperiksas'; // Pastikan sesuai dengan nama tabel di migration
-
     protected $fillable = [
         'id_periksa',
         'id_obat',

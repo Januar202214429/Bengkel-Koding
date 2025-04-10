@@ -13,14 +13,9 @@ class DetailPeriksaSeeder extends Seeder
      */
     public function run(): void
     {
-        DetailPeriksa::create([
-            'id_periksa' => 1, // pastikan ini ID yang ada di tabel `periksa`
-            'id_obat' => 1     // pastikan ini ID yang ada di tabel `obat`
-        ]);
-
-        DetailPeriksa::create([
-            'id_periksa' => 1,
-            'id_obat' => 2
+        DetailPeriksa::insert([
+            ['id_periksa' => 1,'id_obat' => 1],    // pastikan ini ID yang ada di tabel `obat`
+            ['id_periksa' => 1,'id_obat' => 2],
         ]);
     }
 }

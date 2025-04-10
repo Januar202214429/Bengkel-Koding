@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Obat extends Model
 {
-    use HasFactory;
-
-    protected $table = 'obats'; // Nama tabel sudah benar
-
     protected $fillable = [
         'nama_obat',
         'kemasan',

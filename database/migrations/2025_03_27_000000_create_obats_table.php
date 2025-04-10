@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('obats', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_obat', 50);
-            $table->string('kemasan', 35);
+            $table->string('nama_obat');
+            $table->string('kemasan');
             $table->integer('harga');
+            $table->timestamps();
         });
     }
 
